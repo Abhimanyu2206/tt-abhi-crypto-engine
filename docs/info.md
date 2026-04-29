@@ -9,11 +9,23 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This design implements a simple 8-bit cryptographic engine.
+
+The input data is processed through multiple rounds of transformation:
+- XOR with a key
+- Bit rotation
+- Substitution
+
+Each round modifies the data further, producing a scrambled output.
+
+A start signal begins the process, and after 4 rounds, the encrypted output is available.
 
 ## How to test
 
-Explain how to use your project
+1. Provide an 8-bit input through `ui_in`
+2. Set `ui_in[0] = 1` to start the encryption
+3. Wait a few clock cycles
+4. Read the encrypted result from `uo_out`
 
 ## External hardware
 
